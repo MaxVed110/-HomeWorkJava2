@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class MergeSorting {
     public static void main(String[] args) {
-        int[] res = new int[] {1, 31, 8, 1, 3};
+        int[] res = new int[] { 1, 31, 8, 1, 3 };
         SortMerge(res, 0, 4);
         for (int i = 0; i < res.length; i++) {
             System.out.println(res[i]);
@@ -22,15 +22,15 @@ public class MergeSorting {
         for (int k = begin_index; k <= end_index; k++) {
             buf[k] = array[k];
         }
-        int i = begin_index, j = middle+ 1;
-        for (int k = begin_index; k <=end_index; k++) {
-            if(i>middle){
-                array[k]=buf[j];
+        int i = begin_index, j = middle + 1;
+        for (int k = begin_index; k <= end_index; k++) {
+            if (i > middle) {
+                array[k] = buf[j];
                 j++;
-            } else if (j>end_index) {
+            } else if (j > end_index) {
                 array[k] = buf[i];
                 i++;
-            } else if (buf[j]<buf[i]) {
+            } else if (buf[j] < buf[i]) {
                 array[k] = buf[j];
                 j++;
             } else {
